@@ -169,5 +169,13 @@
     "courseTitle": "Curso Presencial - Creación de contenido",
     "price": 3500,
     "date": "2026-05-08T17:16:59.416Z"
+  },
+  {
+    "id": 157574985163,
+    "email": "test_user_4388202457938064633@testuser.com",
+    "amount": 2900,
+    "status": "approved",
+    "date": "2026-05-08T12:33:13.000-04:00",
+    "course": "Curso Virtual - Creación de contenido"
   }
 ]

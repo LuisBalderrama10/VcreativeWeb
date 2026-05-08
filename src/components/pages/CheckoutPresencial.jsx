@@ -39,6 +39,9 @@ export const CheckoutPresencial = () => {
 
       const data = await response.json();
 
+      console.log(data);
+      alert(JSON.stringify(data));
+
       window.location.href = data.init_point;
 
     } catch (error) {
