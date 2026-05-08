@@ -16,7 +16,11 @@ export const CheckoutPresencial = () => {
     });
   };
 
-  const handlePay = async () => {
+  const handlePay = async (e) => {
+    e.preventDefault();
+
+    console.log("CLICK FUNCIONA");
+  alert("CLICK FUNCIONA");
 
     try {
 
@@ -132,7 +136,7 @@ export const CheckoutPresencial = () => {
 
           </div>
 
-          <button type="submit"
+          <button type="button"
             className="checkout-btn-presencial"
             onClick={handlePay}
           >

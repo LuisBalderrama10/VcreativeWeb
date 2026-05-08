@@ -177,5 +177,14 @@
     "status": "approved",
     "date": "2026-05-08T12:33:13.000-04:00",
     "course": "Curso Virtual - Creación de contenido"
+  },
+  {
+    "id": 1778261902886,
+    "name": "Luis Guadalupe Balderrama Palafox",
+    "email": "lbalderrama2001@gmail.com",
+    "phone": "6442362708",
+    "courseTitle": "Curso Presencial - Creación de contenido",
+    "price": 3500,
+    "date": "2026-05-08T17:38:22.886Z"
   }
 ]
