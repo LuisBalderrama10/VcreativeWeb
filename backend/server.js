@@ -51,14 +51,14 @@ app.post("/create-preference", async (req, res) => {
     console.log(req.body);
     const response = await preference.create({
       body: {
-        notification_url: "https://vcreative-backend.onrender.com/webhook",
+        notification_url: "https://vcreativeweb-backend.onrender.com/webhook",
 
         back_urls: {
           success: "http://localhost:3000/pago-exitoso",
           failure: "http://localhost:3000/pago-error",
           pending: "http://localhost:3000/pago-pendiente",
         },
-        auto_return: "approved",
+        //auto_return: "approved",
 
         payer: {
           name,
@@ -115,6 +115,10 @@ app.post("/webhook", async (req, res) => {
       );
 
       const paymentData = response.data;
+
+      console.log("WEBHOOK RECIBIDO");
+      console.log(paymentData.status);
+      console.log(paymentData.metadata);
 
       console.log(paymentData);
 
