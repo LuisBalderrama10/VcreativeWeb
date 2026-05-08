@@ -21,7 +21,7 @@ export const CheckoutVirtual = () => {
     try {
 
       const response = await fetch(
-        "http://localhost:3001/create-preference",
+        "https://vcreative-backend.onrender.com/create-preference",
         {
           method: "POST",
           headers: {
@@ -129,7 +129,8 @@ export const CheckoutVirtual = () => {
 
           </div>
 
-          <button onClick={handlePay}>
+          <button type="submit" 
+          onClick={handlePay}>
             Continuar al pago
           </button>
 

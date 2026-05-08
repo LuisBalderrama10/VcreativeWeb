@@ -21,7 +21,6 @@ import { PrivacyPage } from "./components/pages/PrivacyPage";
 import { Courses } from "./components/pages/Course";
 import { CourseVirtual } from "./components/pages/CourseVirtual";
 import { CoursePresencial } from "./components/pages/CoursePresencial";
-
 import { PagoExitoso } from "./components/pages/PagoExitoso";
 import { PagoError } from "./components/pages/PagoError";
 import { PagoPendiente } from "./components/pages/PagoPendiente";
