@@ -16,45 +16,53 @@ export const CheckoutPresencial = () => {
     });
   };
 
-  const handlePay = async (e) => {
-    e.preventDefault();
+const handlePay = async (e) => {
 
-    console.log("CLICK FUNCIONA");
-  alert("CLICK FUNCIONA");
+  e.preventDefault();
 
-    try {
+  alert("BOTON FUNCIONA");
 
-      const response = await fetch(
-        "https://vcreative-backend.onrender.com/create-preference",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
+  try {
 
-          body: JSON.stringify({
-            ...form,
-            courseTitle:
-              "Curso Presencial - Creación de contenido",
-            price: 3500,
-          }),
-        }
-      );
+    const response = await fetch(
+      "https://vcreative-backend.onrender.com/create-preference",
+      {
+        method: "POST",
 
-      const data = await response.json();
+        headers: {
+          "Content-Type": "application/json",
+        },
 
-      console.log(data);
-      alert(JSON.stringify(data));
+        body: JSON.stringify({
+          ...form,
+          courseTitle:
+            "Curso Virtual - Creación de contenido",
+          price: 2900,
+        }),
+      }
+    );
 
-      window.location.href = data.init_point;
+    console.log(response);
 
-    } catch (error) {
+    alert("STATUS: " + response.status);
 
-      console.log(error);
+    const data = await response.json();
 
-    }
+    console.log(data);
 
-  };
+    alert(JSON.stringify(data));
+
+    window.location.replace(data.init_point);
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("ERROR FETCH");
+
+  }
+
+};
 
   return (
 
