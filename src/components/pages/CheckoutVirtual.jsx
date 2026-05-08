@@ -20,9 +20,9 @@ const handlePay = async (e) => {
 
   e.preventDefault();
 
-  alert("BOTON FUNCIONA");
-
   try {
+
+    alert("Conectando al servidor...");
 
     const response = await fetch(
       "https://vcreative-backend.onrender.com/create-preference",
@@ -42,23 +42,19 @@ const handlePay = async (e) => {
       }
     );
 
-    console.log(response);
-
-    alert("STATUS: " + response.status);
+    alert("Servidor conectado");
 
     const data = await response.json();
 
-    console.log(data);
+    alert("Redireccionando al pago...");
 
-    alert(JSON.stringify(data));
-
-    window.location.replace(data.init_point);
+    window.location.href = data.init_point;
 
   } catch (error) {
 
     console.log(error);
 
-    alert("ERROR FETCH");
+    alert("Error conectando con el servidor");
 
   }
 
@@ -143,8 +139,15 @@ const handlePay = async (e) => {
 
           </div>
 
-          <button type="button" 
-          onClick={handlePay}>
+          <button
+            type="button"
+            onClick={handlePay}
+            style={{
+              background: "red",
+              zIndex: 9999,
+              position: "relative",
+            }}
+          >
             Continuar al pago
           </button>
 
