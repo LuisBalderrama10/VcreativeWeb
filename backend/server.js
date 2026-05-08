@@ -3,7 +3,6 @@ import cors from "cors";
 import dotenv from "dotenv";
 import fs from "fs";
 import axios from "axios";
-
 import nodemailer from "nodemailer";
 
 import {
@@ -15,8 +14,11 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+}));
 
 const client = new MercadoPagoConfig({
   accessToken: process.env.ACCESS_TOKEN,
