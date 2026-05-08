@@ -101,6 +101,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [state, dispatch] = useReducer(appReducer, initialState);
 
   const navigateToPage = (page: string) => {
+    console.log("Navegando a:", page);
     dispatch({ type: 'NAVIGATE_TO_PAGE', payload: page });
     // Scroll to top cuando navegamos a una nueva página
     window.scrollTo({ top: 0, behavior: 'smooth' });
