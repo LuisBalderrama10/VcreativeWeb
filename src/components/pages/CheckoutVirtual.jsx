@@ -37,7 +37,7 @@ const handlePay = async (e) => {
           ...form,
           courseTitle:
             "Curso Virtual - Creación de contenido",
-          price: 2,
+          price: 20,
         }),
       }
     );
