@@ -122,6 +122,11 @@ app.post("/webhook", async (req, res) => {
 
     console.log("PAYMENT ID:", paymentId);
 
+    await new Promise(resolve =>
+      setTimeout(resolve, 3000)
+    );
+
+
     const response = await axios.get(
       `https://api.mercadopago.com/v1/payments/${paymentId}`,
       {
