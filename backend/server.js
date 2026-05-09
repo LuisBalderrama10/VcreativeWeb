@@ -98,6 +98,11 @@ app.post("/create-preference", async (req, res) => {
 
 app.post("/webhook", async (req, res) => {
   try {
+
+    console.log("========== WEBHOOK ==========");
+
+    console.log(JSON.stringify(req.body, null, 2));
+
     const payment = req.body;
 
     console.log("WEBHOOK RECIBIDO");
