@@ -26,6 +26,8 @@ const handlePay = async (e) => {
 
     const response = await fetch(
       "https://vcreativeweb-backend.onrender.com/create-preference",
+
+
       {
         method: "POST",
 
@@ -37,7 +39,7 @@ const handlePay = async (e) => {
           ...form,
           courseTitle:
             "Curso Presencial - Creación de contenido",
-          price: 5,
+          price: 2,
         }),
       }
     );
