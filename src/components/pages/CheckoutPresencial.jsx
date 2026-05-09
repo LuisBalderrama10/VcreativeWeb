@@ -25,7 +25,7 @@ const handlePay = async (e) => {
     alert("Conectando al servidor...");
 
     const response = await fetch(
-      "https://vcreative-backend.onrender.com/create-preference",
+      "http://localhost:3001/create-preference",
       {
         method: "POST",
 
@@ -36,27 +36,37 @@ const handlePay = async (e) => {
         body: JSON.stringify({
           ...form,
           courseTitle:
-            "Curso Virtual - Creación de contenido",
-          price: 2900,
+            "Curso Presencial - Creación de contenido",
+          price: 3500,
         }),
       }
     );
 
-    alert("Servidor conectado");
-
     const data = await response.json();
 
-    alert("Redireccionando al pago...");
+    console.log(data);
 
-    window.location.href = data.init_point;
+    alert(JSON.stringify(data));
+
+    if (data.init_point) {
+
+      alert("Redireccionando al pago...");
+
+      window.location.href = data.init_point;
+
+    } else {
+
+      alert("NO SE RECIBIÓ INIT POINT");
+
+    }
 
   } catch (error) {
 
-    console.log(error);
+  console.log(error);
 
-    alert("Error conectando con el servidor");
+  alert(error.message);
 
-  }
+}
 
 };
 

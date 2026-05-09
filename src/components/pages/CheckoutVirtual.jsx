@@ -25,7 +25,7 @@ const handlePay = async (e) => {
     alert("Conectando al servidor...");
 
     const response = await fetch(
-      "https://vcreative-backend.onrender.com/create-preference",
+      "http://localhost:3001/create-preference",
       {
         method: "POST",
 
@@ -42,12 +42,8 @@ const handlePay = async (e) => {
       }
     );
 
-    alert("Servidor conectado");
-
     const data = await response.json();
-
-    alert("Redireccionando al pago...");
-
+    debugger;
     window.location.href = data.init_point;
 
   } catch (error) {
