@@ -42,7 +42,7 @@ const handlePay = async (e) => {
           ...form,
           courseTitle:
             "Curso Presencial - Creación de contenido",
-          price: 20,
+          price: 3500,
         }),
       }
     );
