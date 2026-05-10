@@ -20,9 +20,12 @@ const handlePay = async (e) => {
 
   e.preventDefault();
 
-  try {
+  if (!form.name || !form.email || !form.phone) {
+    alert("Completa todos los campos");
+  return;
+  }
 
-    alert("Conectando al servidor...");
+  try {
 
     const response = await fetch(
       "https://vcreativeweb-backend.onrender.com/create-preference",
@@ -43,7 +46,7 @@ const handlePay = async (e) => {
     );
 
     const data = await response.json();
-    debugger;
+
     window.location.href = data.init_point;
 
   } catch (error) {
