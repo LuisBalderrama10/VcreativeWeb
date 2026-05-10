@@ -134,7 +134,7 @@ const handlePay = async (e) => {
 
             <span>Total</span>
 
-            <h3>$2,900 MXN</h3>
+            <h3>$3,016 MXN</h3>
 
           </div>
 
