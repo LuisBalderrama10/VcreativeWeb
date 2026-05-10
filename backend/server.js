@@ -31,10 +31,17 @@ const client = new MercadoPagoConfig({
 });
 
 const transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
+  },
+
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -54,11 +61,11 @@ app.post("/create-preference", async (req, res) => {
         notification_url: "https://vcreativeweb-backend.onrender.com/webhook",
 
         back_urls: {
-          success: "http://localhost:3000/pago-exitoso",
-          failure: "http://localhost:3000/pago-error",
-          pending: "http://localhost:3000/pago-pendiente",
+          success: "https://vcreative-lac.vercel.app/",
+          failure: "https://vcreative-lac.vercel.app/pago-error",
+          pending: "https://vcreative-lac.vercel.app/pago-pendiente",
         },
-        //auto_return: "approved",
+        auto_return: "approved",
 
         payer: {
           name,
