@@ -14,6 +14,7 @@ export const Courses = () => {
       image: Banner2,
       level: "Virtual",
       page: "/curso-virtual",
+      checkout: "/checkout-virtual",
     },
     {
       title: "La creación de contenido como negocio",
@@ -21,6 +22,7 @@ export const Courses = () => {
       image: Banner1,
       level: "Presencial",
       page: "/curso-presencial",
+      checkout: "/checkout-presencial",
     },
   ];
 
@@ -52,7 +54,7 @@ export const Courses = () => {
                 </button>
 
                 
-                <button onClick={() => navigate(course.page)}>
+                <button onClick={() => navigate(course.checkout)}>
                   Inscribirme
                 </button>
 

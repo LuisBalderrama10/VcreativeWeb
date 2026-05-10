@@ -51,11 +51,9 @@ const handlePay = async (e) => {
 
     console.log(data);
 
-    alert(JSON.stringify(data));
 
     if (data.init_point) {
 
-      alert("Redireccionando al pago...");
 
       window.location.href = data.init_point;
 
@@ -156,13 +154,9 @@ const handlePay = async (e) => {
           </div>
 
           <button
+          className="checkout-btn-presencial"
             type="button"
             onClick={handlePay}
-            style={{
-              background: "red",
-              zIndex: 9999,
-              position: "relative",
-            }}
           >
             Continuar al pago
           </button>   

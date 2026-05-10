@@ -21,7 +21,7 @@ const handlePay = async (e) => {
   e.preventDefault();
 
   if (!form.name || !form.email || !form.phone) {
-    alert("Completa todos los campos");
+  alert("Completa todos los campos");
   return;
   }
 
@@ -139,13 +139,9 @@ const handlePay = async (e) => {
           </div>
 
           <button
+          className="checkout-card-btn"
             type="button"
             onClick={handlePay}
-            style={{
-              background: "red",
-              zIndex: 9999,
-              position: "relative",
-            }}
           >
             Continuar al pago
           </button>
