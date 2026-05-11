@@ -61,7 +61,7 @@ app.post("/create-preference", async (req, res) => {
         notification_url: "https://vcreativeweb-backend.onrender.com/webhook",
 
         back_urls: {
-          success: "https://vcreative-lac.vercel.app/pago-exitoso",
+          success: `https://vcreative-lac.vercel.app/pago-exitoso?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&phone=${encodeURIComponent(phone)}&course=${encodeURIComponent(courseTitle)}&amount=${price}`,
           failure: "https://vcreative-lac.vercel.app/pago-error",
           pending: "https://vcreative-lac.vercel.app/pago-pendiente",
         },

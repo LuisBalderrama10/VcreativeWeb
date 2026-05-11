@@ -1,9 +1,49 @@
 import React from "react";
+import {
+  useSearchParams,
+} from "react-router-dom";
 
 export const PagoExitoso = () => {
 
+  const [searchParams] =
+    useSearchParams();
+
+  const name =
+    searchParams.get("name");
+
+  const email =
+    searchParams.get("email");
+
+  const phone =
+    searchParams.get("phone");
+
+  const course =
+    searchParams.get("course");
+
+  const amount =
+    searchParams.get("amount");
+
+  const message = `
+✅ NUEVA INSCRIPCIÓN
+
+👤 Nombre:
+${name}
+
+📧 Correo:
+${email}
+
+📱 Teléfono:
+${phone}
+
+🎓 Curso:
+${course}
+
+💰 Monto:
+$${amount} MXN
+`;
+
   const whatsappLink =
-    "https://wa.me/526442362708?text=Hola%20VCreative,%20ya%20realicé%20mi%20pago%20del%20curso%20✅";
+    `https://wa.me/526442348071?text=${encodeURIComponent(message)}`;
 
   return (
 
