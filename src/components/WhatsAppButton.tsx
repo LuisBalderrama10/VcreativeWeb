@@ -6,7 +6,7 @@ export const WhatsAppButton: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
 
-  const whatsappNumber = "6442348071";   // Reemplaza con tu número de WhatsApp
+  const whatsappNumber = "6442348071";   
   const message = "¡Hola! ¿Te interesa conocer más sobre nuestros servicios creativos? 🎨";
 
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;

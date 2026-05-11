@@ -21,7 +21,7 @@ export const CoursePresencial = () => {
 
           <div className="cd-actions">
             <button onClick={() => navigate("/checkout-presencial")}>
-              Pagar ahora
+              Inscribirme ahora
             </button>
             
           </div>
@@ -38,20 +38,26 @@ export const CoursePresencial = () => {
 
   {/* APRENDERÁS */}
   <div className="cd-section">
-    <h2>¿Que temas verás?</h2>
+    <h2>¿Qué temas verás?</h2>
 
     <div className="cd-features">
       <div>
-        <h2>Dia 1</h2>
-        <p>Investigacion de mercado objetivo.</p>
-        <p>Analisis, trucos y estrategias para redes sociales.</p>
-        <p>Metodologia para recolectar contenido.</p>
+        <h2>Día 1</h2>
+
+        <p>Investigación de mercado objetivo.</p>
+
+        <p>Análisis, trucos y estrategias para redes sociales.</p>
+
+        <p>Metodología para recolectar contenido.</p>
       </div>
 
       <div>
-        <h2>Dia 2</h2>
-        <p>Taller fotografico.</p>
+        <h2>Día 2</h2>
+
+        <p>Taller fotográfico.</p>
+
         <p>Taller de video.</p>
+
         <p>Aprende a cobrar.</p>
       </div>
     </div>
@@ -59,11 +65,11 @@ export const CoursePresencial = () => {
 
   {/* DETALLES */}
   <div className="cd-section cd-details">
-    <h2>¿Que incluye?</h2>
+    <h2>¿Qué incluye?</h2>
 
     <div className="cd-details-grid">
       <div>
-        <p>🔵 7 horas de curso intensivo presencial en 2 dias.</p>
+        <p>🔵 7 horas de curso intensivo presencial en 2 días.</p>
         <p>🔵 Refrigerios y coffee break.</p>
         <p>🔵 Kit de notas.</p>
         <p>🔵 Reconocimiento.</p>
@@ -71,13 +77,19 @@ export const CoursePresencial = () => {
 
       <div>
         <span>Ubicación</span>
-        <p>Ciudad Obregón</p>
+        <p>C. Sufragio Efectivo #143, Centro, Fundo Legal, 85000 Cdad. Obregón, Son.</p>
+      </div>
+
+      <div>
+        <span>Fechas</span>
+        <p>1 y 2 de Junio 2026</p>
       </div>
 
       <div>
         <span>Cupos</span>
-        <p>Limitados</p>
+        <p>Cupos limitados.</p>
       </div>
+
     </div>
   </div>
 
@@ -86,11 +98,11 @@ export const CoursePresencial = () => {
       {/* CTA FINAL */}
       <div className="cd-cta">
         <h2>Asegura tu lugar</h2>
-        <p style={{ color: "#4dabff", fontWeight: "500" }}>
+        {/* <p style={{ color: "#4dabff", fontWeight: "500" }}>
           ⚠️ Últimos lugares disponibles
-        </p>
+        </p> */}
         <button onClick={() => navigate("/checkout-presencial")}>
-          Pagar ahora
+          Inscribirme
         </button>
       </div>
 

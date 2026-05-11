@@ -40,7 +40,7 @@ const handlePay = async (e) => {
           ...form,
           courseTitle:
             "Curso Virtual - Creación de contenido",
-          price: 20,
+          price: 3016,
         }),
       }
     );
@@ -85,19 +85,19 @@ const handlePay = async (e) => {
           <div className="checkout-points">
 
             <div>
-              🟠 Acceso inmediato
+              🟠 Acceso inmediato.
             </div>
 
             <div>
-              🟠 Estrategias reales
+              🟠 Estrategias reales.
             </div>
 
             <div>
-              🟠 Material exclusivo
+              🟠 Material exclusivo.
             </div>
 
             <div>
-              🟠 Comunidad privada
+              🟠 Comunidad privada.
             </div>
 
           </div>

@@ -20,7 +20,7 @@ const handlePay = async (e) => {
 
   e.preventDefault();
 
-  if (!form.name || !form.email || !form.phone) {
+  if (!form.name.trim() || !form.email.trim() || !form.phone.trim()) {
     alert("Completa todos los campos");
   return;
   }
@@ -42,7 +42,7 @@ const handlePay = async (e) => {
           ...form,
           courseTitle:
             "Curso Presencial - Creación de contenido",
-          price: 20,
+          price: 3646,
         }),
       }
     );
@@ -100,19 +100,19 @@ const handlePay = async (e) => {
           <div className="checkout-points">
 
             <div>
-              🔵 Taller práctico
+              🔵 Taller práctico.
             </div>
 
             <div>
-              🔵 Networking
+              🔵 Networking.
             </div>
 
             <div>
-              🔵 Material físico
+              🔵 Material físico.
             </div>
 
             <div>
-              🔵 Cupos limitados
+              🔵 Cupos limitados.
             </div>
 
           </div>

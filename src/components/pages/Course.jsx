@@ -9,16 +9,16 @@ export const Courses = () => {
 
   const courses = [
     {
-      title: "La creación de contenido como negocio",
-      description: "Curso intensivo de manera Virtual",
+      title: "16 y 17 de Julio 2026",
+      description: "Curso intensivo en modalidad virtual",
       image: Banner2,
       level: "Virtual",
       page: "/curso-virtual",
       checkout: "/checkout-virtual",
     },
     {
-      title: "La creación de contenido como negocio",
-      description: "Curso intensivo de manera Presencial",
+      title: "1 y 2 de Junio 2026",
+      description: "Curso intensivo en modalidad presencial",
       image: Banner1,
       level: "Presencial",
       page: "/curso-presencial",

@@ -5,32 +5,6 @@ import { useNavigate } from "react-router-dom";
 
 export const CourseVirtual = () => {
 
-const handlePayment = async () => {
-  try {
-    const response = await fetch(
-      "http://localhost:3001/create-preference",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          title: "Curso Virtual VCreative",
-          price: 2900,
-        }),
-      }
-    );
-
-    const data = await response.json();
-
-    window.location.href = data.init_point;
-    
-
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 const navigate = useNavigate();
 
   return (
@@ -48,13 +22,13 @@ const navigate = useNavigate();
 
           <div className="cd-actions">
             <button onClick={() => navigate("/checkout-virtual")}>
-              Pagar ahora
+              Inscribirme ahora
             </button>
           </div>
         </div>
 
         <div className="cd-hero-img">
-          <img src={Banner2} alt="Curso presencial" />
+          <img src={Banner2} alt="Curso virtual" />
         </div>
       </div>
       
@@ -65,20 +39,26 @@ const navigate = useNavigate();
 
   {/* APRENDERÁS */}
   <div className="cd-section">
-    <h2>¿Que temas verás?</h2>
+    <h2>¿Qué temas verás?</h2>
 
     <div className="cd-features">
       <div>
-        <h2>Dia 1</h2>
-        <p>Investigacion de mercado objetivo.</p>
-        <p>Analisis, trucos y estrategias para redes sociales.</p>
-        <p>Metodologia para recolectar contenido.</p>
+        <h2>Día 1</h2>
+
+        <p>Investigación de mercado objetivo.</p>
+
+        <p>Análisis, trucos y estrategias para redes sociales.</p>
+
+        <p>Metodología para recolectar contenido.</p>
       </div>
 
       <div>
-        <h2>Dia 2</h2>
-        <p>Taller fotografico.</p>
-        <p>Taller de video.</p>
+        <h2>Día 2</h2>
+
+        <p>Técnica fotográfica básica, ajustes y material recomendado.</p>
+
+        <p>Metodología para crear un video.</p>
+
         <p>Aprende a cobrar.</p>
       </div>
     </div>
@@ -86,24 +66,28 @@ const navigate = useNavigate();
 
   {/* DETALLES */}
   <div className="cd-section cd-details">
-    <h2>¿Que incluye?</h2>
+    <h2>¿Qué incluye?</h2>
 
     <div className="cd-details-grid">
       <div>
-        <p>🟠 7 horas de curso intensivo presencial en 2 dias.</p>
-        <p>🟠 Refrigerios y coffee break.</p>
-        <p>🟠 Kit de notas.</p>
-        <p>🟠 Reconocimiento.</p>
+        <p>🟠 6 horas de curso intensivo virtual.</p>
+        <p>🟠 Material digital del curso.</p>
+        <p>🟠 Reconocimiento PDF digital.</p>
       </div>
 
       <div>
         <span>Ubicación</span>
-        <p>Ciudad Obregón</p>
+        <p>Cd. Obregón, Son.</p>
+      </div>
+
+      <div>
+        <span>Fechas</span>
+        <p>16 y 17 de Julio 2026</p>
       </div>
 
       <div>
         <span>Cupos</span>
-        <p>Limitados</p>
+        <p>Cupos limitados.</p>
       </div>
     </div>
   </div>
@@ -113,11 +97,11 @@ const navigate = useNavigate();
       {/* CTA FINAL */}
       <div className="cd-cta">
         <h2>Asegura tu lugar</h2>
-        <p style={{ color: "#4dabff", fontWeight: "500" }}>
+        {/* <p style={{ color: "#4dabff", fontWeight: "500" }}>
           ⚠️ Últimos lugares disponibles
-        </p>
+        </p> */}
         <button onClick={() => navigate("/checkout-virtual")}>
-          Pagar ahora
+          Inscribirme
         </button>
       </div>
 
