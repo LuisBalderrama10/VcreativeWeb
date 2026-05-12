@@ -67,8 +67,11 @@
 }
 
 .cd-section h2 {
+  border-left: 4px solid #4dabff;
+  padding-left: 10px;
   margin-bottom: 20px;
   font-weight: 600;
+  COLOR: #4dabff;
 }
 
 /* FEATURES */
@@ -96,7 +99,7 @@
 
 .cd-details-grid span {
   font-size: 13px;
-  color: #aaa;
+  color: #4dabff;
 }
 
 .cd-details-grid p {

@@ -89,6 +89,13 @@ const navigate = useNavigate();
         <span>Cupos</span>
         <p>Cupos limitados.</p>
       </div>
+
+      <div>
+        <span>Precio: $3,765</span>
+        <p>Precio en preventa con el 20% de descuento : $3,016</p>
+        <p>Hasta el 6 de julio </p>
+      </div>
+
     </div>
   </div>
 

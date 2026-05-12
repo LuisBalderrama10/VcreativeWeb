@@ -77,7 +77,7 @@ export const CoursePresencial = () => {
 
       <div>
         <span>Ubicación</span>
-        <p>C. Sufragio Efectivo #143, Centro, Fundo Legal, 85000 Cdad. Obregón, Son.</p>
+        <p>Calle Sufragio Efectivo #143, La Casa del Arbol, Cd. Obregón, Son</p>
       </div>
 
       <div>
@@ -88,6 +88,12 @@ export const CoursePresencial = () => {
       <div>
         <span>Cupos</span>
         <p>Cupos limitados.</p>
+      </div>
+
+      <div>
+        <span>Precio: $4,560</span>
+        <p>Precio en preventa con el 20% de descuento : $3,646</p>
+        <p>Hasta el 27 de mayo </p>
       </div>
 
     </div>
